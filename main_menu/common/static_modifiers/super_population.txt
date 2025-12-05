@@ -42,8 +42,8 @@ TRY_REPLACE:province_starving = {
 		category = province
 	}
 	
-	# 饥荒影响是原来的4倍，当一个地方发生饥荒时，恢复人口需要10年时间
-	local_population_growth = -0.01
+	# 饥荒影响是原来的3倍，当一个地方发生饥荒时，恢复人口需要7.5年时间
+	local_population_growth = -0.075
 	local_supply_limit_modifier = -0.25
 	local_migration_attraction = -1.0
 	
@@ -144,21 +144,21 @@ TRY_REPLACE:devastation = {
 	local_population_capacity_modifier = 0.8
 }
 
-REPLACE:looted = {
+TRY_REPLACE:looted = {
 	game_data = {
 		category = location
 	}
 
 	hostile_food_multiplier = -0.20
 
-	# 劫掠会带来更高的人口损耗与荒废
+	# 劫掠会带来更高的人口减少和荒废
 	local_population_growth = -0.02
 	local_monthly_prosperity = -0.04
 	local_monthly_development_modifier = -0.25
 	max_attrition = 5			#Maximum Attrition is increased by 5
 }
 
-REPLACE:under_siege = {
+TRY_REPLACE:under_siege = {
 	game_data = {
 		category = location
 	}
@@ -171,36 +171,38 @@ REPLACE:under_siege = {
 	constructions_stalled = yes
 }
 
-REPLACE:is_occupied = {
-	game_data = {
-		category = location
-	}
-	local_monthly_prosperity = -0.01
-	local_monthly_control = -0.002
+# 现在直接通过粮食来影响人口增长
+# TRY_REPLACE:is_occupied = {
+# 	game_data = {
+# 		category = location
+# 	}
+# 	local_monthly_prosperity = -0.01
+# 	local_monthly_control = -0.002
 	
-	hostile_food_multiplier = -0.5
+# 	hostile_food_multiplier = -0.5
 	
-	local_garrison_growth = -2.0
+# 	local_garrison_growth = -2.0
 	
-	local_construction_speed = -0.25
+# 	local_construction_speed = -0.25
 
-	# 被占领会带来人口减少
-	local_population_growth = -0.005
+# 	# 被占领会带来人口减少
+# 	local_population_growth = -0.005
 
-}
+# }
 
-REPLACE:raised_levies = {
-	game_data = {
-		category = location
-	}
-	local_raw_material_output = -0.2
-	local_monthly_food_modifier = -0.2
+# 现在直接通过粮食影响人口增长
+# TRY_REPLACE:raised_levies = {
+# 	game_data = {
+# 		category = location
+# 	}
+# 	local_raw_material_output = -0.2
+# 	local_monthly_food_modifier = -0.2
 
-	# 减少年轻人口会带来人口增长率的减少
-	local_population_growth = -0.003
-}
+# 	# 减少年轻人口会带来人口增长率的减少
+# 	local_population_growth = -0.003
+# }
 
-REPLACE:cheap_food_in_location = {
+TRY_REPLACE:cheap_food_in_location = {
 	game_data = {
 		category = location
 	}
@@ -209,11 +211,11 @@ REPLACE:cheap_food_in_location = {
 	local_population_growth = 0.02
 }
 
-REPLACE:expensive_food_in_location = {
+TRY_REPLACE:expensive_food_in_location = {
 	game_data = {
 		category = location
 	}
 
 	# 昂贵的食物对人口增长带来非常高的负面影响
-	local_population_growth = -0.012
+	local_population_growth = -0.015
 }

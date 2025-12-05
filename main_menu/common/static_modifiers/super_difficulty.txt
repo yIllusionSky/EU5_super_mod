@@ -1,0 +1,41 @@
+TRY_INJECT:difficulty_player_very_easy = {
+	global_pop_food_consumption = 0.2
+}
+
+TRY_INJECT:difficulty_player_easy = {
+	global_pop_food_consumption = 0.2
+}
+
+
+TRY_INJECT:difficulty_player_normal = {
+	global_pop_food_consumption = 0.2
+}
+
+TRY_INJECT:difficulty_player_hard = {
+	global_pop_food_consumption = 0.2
+
+}
+
+TRY_INJECT:difficulty_player_very_hard = {
+	global_pop_food_consumption = 0.2
+}
+
+TRY_INJECT:difficulty_ai_very_easy = {
+	global_pop_food_consumption = 0.2
+}
+
+TRY_INJECT:difficulty_ai_easy = {
+	global_pop_food_consumption = 0.2
+}
+
+TRY_INJECT:difficulty_ai_normal = {
+	global_pop_food_consumption = 0.2
+}
+
+TRY_INJECT:difficulty_ai_hard = {
+	global_pop_food_consumption = 0.2
+}
+
+TRY_INJECT:difficulty_ai_very_hard = {
+	global_pop_food_consumption = 0.2
+}
